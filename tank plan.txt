@@ -1,0 +1,31 @@
+Tank Behavior
+
+turret
+	scan
+		rotate to the right 360 until see
+		if border <= 1 or 2 rotate 270deg
+		if targetsee -> aim
+
+	aim
+		rotate left or right until 5deg
+		-> fire
+		if target is out of sight -> scan
+	
+	fire
+		if target is to close dont fire
+
+tank
+	Search
+		move from node to node
+		if targetsee -> persue
+	
+	Persue
+		if target within range move to right
+		if target !range move foward
+		if target is to close move back
+		if target is to close for 3s move right
+		if target is out of sight -> search
+		if targets health is low -> aggresive
+		if fire dont move forward
+	Aggresive
+		move forward

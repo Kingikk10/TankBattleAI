@@ -1,0 +1,29 @@
+Tank states
+
+turret
+	SCAN
+		rotate to the right 360 until see
+		if targetsee -> LOCK
+	
+	LOCK
+		if to far left turn right if to far right turn left
+		if < 15 and on target -> fire
+		if out of range -> SCAN
+	FIRE
+		fire
+		turret state ->LOCK
+
+
+Tank
+	SEEK
+		Choose Random Node move
+		if taget insight -> PERSUE
+
+	PERSUE
+		Move towrds last known position
+		If out of sight -> SEEK
+		if distance <10 -> AVOID
+
+	AVoid
+		Move Back
+		If distance > 25 -> SEEK
